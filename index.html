@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Species and their genes</title>
+  </head>
+  <body style="background-color: springgreen;">
+
+  <p><h1>Species and their genes</h1>
+
+  <p><h2>- 1 -</h2>
+  <p>In this option, you can select a limited number for listing species:</p>
+  <p>Note that, if you do not write any limit, all the species will be sorted.</p>
+  <form action="/listSpecies" method="get">
+      <input type="text" size="2" name="limit">
+      <input type="submit" value="List species"><br>
+       Click here to get a response in json format:
+        <input type="checkbox" name="json" value="1">
+  </form>
+
+  <p><h2>- 2 -</h2>
+  <p>Now you can obtain the karyotype for a certain species:</p>
+  <form action="/karyotype" method="get">
+      <input type="text" size="10" name="specie">
+      <input type="submit" value="List the karyotype"><br>
+       Click here to get a response in json format:
+        <input type="checkbox" name="json" value="1">
+
+  </form>
+
+  <p><h2>- 3 -</h2>
+  <p>Get the length of a desired chromosome:</p>
+  <form action="/chromosomeLength" method="get">
+      <p>Species: </p>
+      <input type="text" size="10" name="specie"><br>
+      <p>Number of chromosome:</p>
+      <input type="text" size="2" name="chromo">
+      <input type="submit" value="Get the length"><br>
+       Click here to get a response in json format:
+        <input type="checkbox" name="json" value="1">
+  </form><br>
+
+
+  <p><h1>Human genes</h1>
+
+  <p><h2>- 1 -</h2>
+  <p>Write a human gene to obtain its sequence:</p>
+   <form action="/geneSeq" method="get">
+       <input type="text" size="10" name="gene">
+      <input type="submit" value="Obtain"><br>
+        Click here to get a response in json format:
+        <input type="checkbox" name="json" value="1">
+    </form>
+
+  <p><h2>- 2 -</h2>
+  <p>Write a human gene to obtain information about it:</p>
+  <p>(Start, end, length, ID and chromosome)</p>
+   <form action="/geneInfo" method="get">
+       <input type="text" size="10" name="gene">
+      <input type="submit" value="Obtain"><br>
+        Click here to get a response in json format:
+        <input type="checkbox" name="json" value="1">
+    </form>
+
+  <p><h2>- 3 -</h2>
+      <p>Write a human gene to obtain its total length and the percentage
+      of all its bases (A, C, G, T):</p>
+   <form action="/geneCal" method="get">
+       <input type="text" size="10" name="gene">
+      <input type="submit" value="Obtain"><br>
+        Click here to get a response in json format:
+        <input type="checkbox" name="json" value="1">
+    </form>
+
+  <p><h2>- 4 -</h2>
+  <p>Write a human chromosome and a start and ending point to get the names of the genes located between both points:</p>
+   <form action="/geneList" method="get">
+       <p>Chromosme:</p>
+       <input type="text" size="10" name="chromo">
+       <p>Starting point:</p>
+       <input type="text" size="7" name="start">
+       <p>Ending point:</p>
+       <input type="text" size="7" name="end">
+      <input type="submit" value="Obtain"><br>
+        Click here to get a response in json format:
+        <input type="checkbox" name="json" value="1">
+    </form>
+  </body>
+</html>
