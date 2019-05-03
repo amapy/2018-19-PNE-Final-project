@@ -8,7 +8,7 @@ print("\nConnecting to server: {}:{}\n".format(SERVER, PORT))
 
 my_url = ["/listSpecies?json=1", "/listSpecies?limit=10&json=1", "/karyotype?specie=sheep&json=1",
           "/chromosomeLength?specie=human&chromo=3&json=1", "/geneSeq?gene=FRAT2&json=1",
-          "/geneInfo?gene=FRAT2&json=1", "/geneCal?gene=FRAT2&json=1",
+          "/geneInfo?gene=FRAT2&json=1", "/geneCalc?gene=FRAT2&json=1",
           "/geneList?chromo=4&start=1&end=3000000&json=1"]
 
 number = 1
