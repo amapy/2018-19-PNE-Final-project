@@ -270,7 +270,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
 
         # For /geneCal resource.
 
-        elif "/geneCal" in self.path:
+        elif "/geneCalc" in self.path:
             try:
                 names = self.create_dict(self.path)
                 gene = names["gene"]
